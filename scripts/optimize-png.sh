@@ -6,9 +6,6 @@ input_dir="$1"
 if [[ -z "$input_dir" ]]; then
   echo "Please specify an input directory."
   exit 1
-elif [[ -z "$quality" ]]; then
-  echo "Please specify image quality."
-  exit 1
 fi
 
 # for each png in the input directory

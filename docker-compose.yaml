@@ -4,5 +4,6 @@ services:
         container_name: ubuntu
         build: .
         volumes:
-            - .:/images
+            - ./images:/images
             - ./scripts:/scripts
+        command: tail -f /dev/null
