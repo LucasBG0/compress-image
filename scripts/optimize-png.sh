@@ -9,7 +9,7 @@ if [[ -z "$input_dir" ]]; then
 fi
 
 # for each png in the input directory
-for img in $( find $input_dir -size +1024k -type f -iname "*.png" );
+for img in $( find $input_dir -name '*.png' -size +1M -type f );
 do
   pngquant --speed 1 $img -o $img -f
 done

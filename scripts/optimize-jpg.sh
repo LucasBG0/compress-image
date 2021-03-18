@@ -15,7 +15,7 @@ elif [[ -z "$quality" ]]; then
 fi
 
 # for each jpg or jpeg in the input directory
-for img in $( find $input_dir -size +1024k -type f -iname "*.jpg" -o -iname "*.jpeg" );
+for img in $( find $input_dir \( -name '*.png' -or -name '*.jpg' -or -name '*.jpeg' \) -size +1M -type f );
 do
   jpegoptim -m $quality $img
 done
